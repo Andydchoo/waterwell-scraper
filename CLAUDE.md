@@ -63,7 +63,7 @@ Live collections hit real public sites and take minutes. Run them in the backgro
 ## State and open items
 
 - Everything above is implemented and verified live on Mecklenburg County NC and Hennepin County MN (2026-11-10 and 2026-11-11). Sample runs from those checks are in `runs/2026-11-10/` and `runs/2026-11-11/`; older folders in `runs/` predate the rewrite and can be viewed but not resumed.
-- The folder is **not a git repository** and nothing has been committed.
+- Git: local repository on `main`, started 2026-11-11 with the project as it stood after the rewrite. No remote is configured. `runs/`, `dist/`, `node_modules/`, `research/` and `test-results/` are not tracked, so collected data and the sample runs exist only on this machine. Commit only when the user asks.
 - Known gaps, none started:
   - Official-site crawl did not reach Minnesota's well index within the default 40-page limit; untested whether a higher `--max-targets` reaches it.
   - A paid search API (for example Brave Search) as an extra discovery source was discussed and not built.
