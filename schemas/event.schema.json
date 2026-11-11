@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "info",
+        "error"
+      ]
+    },
+    "event": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "attempt_id": {
+      "type": "integer",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stage": {
+      "type": "string"
+    },
+    "duration_ms": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "timestamp",
+    "level",
+    "event",
+    "run_id",
+    "attempt_id",
+    "source_id",
+    "task_id",
+    "stage",
+    "duration_ms"
+  ],
+  "additionalProperties": {}
+}

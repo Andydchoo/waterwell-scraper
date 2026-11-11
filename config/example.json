@@ -1,0 +1,20 @@
+{
+  "state": "NC",
+  "county": "Mecklenburg",
+  "output": "./runs",
+  "sources": [],
+  "approaches": [],
+  "seedUrls": [],
+  "maxTargets": 40,
+  "attachments": "all",
+  "jsonArray": true,
+  "headful": false,
+  "maxDuration": 7200,
+  "maxBytes": 5368709120,
+  "maxRecords": 1000000,
+  "intervalMs": 1000,
+  "batchSize": 500,
+  "logLevel": "info",
+  "minFreeBytes": 104857600,
+  "interactiveAuth": false
+}

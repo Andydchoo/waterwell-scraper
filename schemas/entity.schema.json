@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "native_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "county_geoid": {
+      "type": "string",
+      "pattern": "^\\d{5}$"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "retrieved_at": {
+      "type": "string"
+    },
+    "raw_path": {
+      "type": "string"
+    },
+    "raw_sha256": {
+      "type": "string"
+    },
+    "source_fields": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "source_id",
+    "dataset_id",
+    "native_id",
+    "county_geoid",
+    "source_url",
+    "retrieved_at",
+    "raw_path",
+    "raw_sha256",
+    "source_fields",
+    "quality_flags"
+  ],
+  "additionalProperties": {}
+}

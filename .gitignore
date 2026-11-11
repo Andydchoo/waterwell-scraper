@@ -1,0 +1,12 @@
+node_modules/
+dist/
+runs/
+.well-scraper/
+.env
+.env.*
+!.env.example
+playwright/.auth/
+test-results/
+research/
+*.sqlite*
+.DS_Store

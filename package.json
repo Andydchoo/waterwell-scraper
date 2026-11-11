@@ -1,0 +1,56 @@
+{
+  "name": "waterwell-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "bin": {
+    "well-scraper": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && tsc -p web/tsconfig.json && vite build --config web/vite.config.ts",
+    "typecheck": "tsc --noEmit && tsc -p web/tsconfig.json",
+    "lint": "tsc --noEmit --noUnusedLocals --noUnusedParameters && tsc -p web/tsconfig.json --noUnusedLocals --noUnusedParameters",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "RUN_BROWSER_TESTS=1 tsx --test tests/browser.test.ts",
+    "test:live": "tsx scripts/live-smoke.ts",
+    "browsers:install": "PLAYWRIGHT_BROWSERS_PATH=.well-scraper/browsers playwright install chromium",
+    "format": "prettier --write src web tests scripts config package.json tsconfig.json",
+    "format:check": "prettier --check src web tests scripts config package.json tsconfig.json",
+    "schemas": "tsx scripts/schemas.ts",
+    "test:scale": "tsx scripts/scale-test.ts",
+    "ui": "node dist/dashboard/server.js",
+    "test:ui": "RUN_UI_TESTS=1 tsx --test tests/dashboard-browser.test.ts",
+    "test:explorer": "tsx --test tests/explorer.test.ts",
+    "test:explorer-ui": "RUN_EXPLORER_TESTS=1 tsx --test tests/explorer-browser.test.ts",
+    "test:explorer-scale": "tsx scripts/explorer-scale-test.ts"
+  },
+  "dependencies": {
+    "@fastify/static": "10.1.8",
+    "@turf/boolean-point-in-polygon": "7.4.0",
+    "cheerio": "1.2.0",
+    "commander": "15.0.0",
+    "fastify": "5.12.7",
+    "ipaddr.js": "2.5.0",
+    "lucide-react": "1.63.0",
+    "playwright": "1.64.1",
+    "proj4": "2.22.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/geojson": "7946.0.16",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}
